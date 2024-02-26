@@ -14,6 +14,7 @@ export default function Home() {
   });
   const [enteredInput, setEnteredInput] = useState("");
   const [search, initiateSearch] = useState(false);
+  const KEY = process.env.KEY;
 
   useEffect(() => {
     if (search) {
@@ -25,7 +26,7 @@ export default function Home() {
             {
               method: "GET",
               headers: {
-                "api-key": process.env.API_KEY,
+                "api-key": KEY,
               },
             }
           );
