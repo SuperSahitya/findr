@@ -1,0 +1,19 @@
+.mainContainer {
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 100vw;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 20px;
+}
+.dataContainer {
+  width: 100%;
+  padding: 30px;
+  gap: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* flex-direction: column; */
+  flex-wrap: wrap;
+}
