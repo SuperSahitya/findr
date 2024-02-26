@@ -14,7 +14,7 @@ export default function Home() {
   });
   const [enteredInput, setEnteredInput] = useState("");
   const [search, initiateSearch] = useState(false);
-  const KEY = process.env.NEXT_PUBLIC_KEY;
+  const NEXT_PUBLIC_KEY = process.env.NEXT_PUBLIC_KEY;
 
   useEffect(() => {
     if (search) {
