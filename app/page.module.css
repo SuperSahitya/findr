@@ -17,3 +17,15 @@
   /* flex-direction: column; */
   flex-wrap: wrap;
 }
+.loader {
+  height: 300px;
+  width: 300px;
+  background-image: url("../public/Loading_icon.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+.error{
+  color: red;
+  padding-top: 20px;
+  font-size: 1.3rem;
+}
