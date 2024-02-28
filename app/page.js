@@ -98,16 +98,6 @@ export default function Home() {
             );
           })}
         </div>
-        <DataRep
-          studentName="Sahitya Kumar Choubey"
-          department="DD-BT"
-          roll="22BT1005"
-          reg="22U10859"
-          cgpa={7.9}
-          sgpa={8.9}
-          birthDate={"11-01-2004"}
-          passStatus="pass"
-        ></DataRep>
         <Footer></Footer>
       </div>
     </>
