@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar";
 import DataRep from "./components/DataRep";
 import SearchTab from "./components/SearchTab";
 import { useState, useEffect } from "react";
+import Footer from "./components/Footer";
 
 export default function Home() {
   const [data, setData] = useState([]);
@@ -75,7 +76,9 @@ export default function Home() {
         {error == "" ? (
           ""
         ) : (
-          <p className={styles.error}>An Error Occured While Fetching Data: {error}</p>
+          <p className={styles.error}>
+            An Error Occured While Fetching Data: {error}
+          </p>
         )}
         {found ? "" : <p className={styles.error2}>No Data Found</p>}
         <div className={styles.dataContainer}>
@@ -95,7 +98,7 @@ export default function Home() {
             );
           })}
         </div>
-        {/* <DataRep
+        <DataRep
           studentName="Sahitya Kumar Choubey"
           department="DD-BT"
           roll="22BT1005"
@@ -104,7 +107,8 @@ export default function Home() {
           sgpa={8.9}
           birthDate={"11-01-2004"}
           passStatus="pass"
-        ></DataRep> */}
+        ></DataRep>
+        <Footer></Footer>
       </div>
     </>
   );

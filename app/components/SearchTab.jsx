@@ -17,13 +17,18 @@ const searchTab = ({ setEnteredInput, setSelectedValue, initiateSearch }) => {
       border: state.isFocused ? 0 : 0,
       boxShadow: state.isFocused ? 0 : 0,
       "&:hover": {
+        backgroundColor: "lightgray",
         border: state.isFocused ? 0 : 0,
       },
     }),
     option: (provided, state) => ({
       ...provided,
       color: state.isSelected ? "white" : "black",
-      backgroundColor: state.isSelected ? "blue" : "white",
+      backgroundColor: state.isSelected ? "black" : "white",
+      "&:hover": {
+        backgroundColor: "lightgray",
+        border: state.isFocused ? 0 : 0,
+      },
     }),
   };
   return (

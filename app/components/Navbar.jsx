@@ -1,4 +1,5 @@
 import styles from "./navbar.module.css";
+import { GiCrackedAlienSkull } from "react-icons/gi";
 
 const Navbar = () => {
   return (
@@ -6,8 +7,7 @@ const Navbar = () => {
       <div className={styles.navbar}>
         <div className={styles.logo}>Findr</div>
         <div className={styles.menu}>
-          <div>Log In</div>
-          <div>Sign In</div>
+          <GiCrackedAlienSkull className={styles.icon}/>
         </div>
       </div>
     </>
