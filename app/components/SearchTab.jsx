@@ -54,6 +54,11 @@ const searchTab = ({ setEnteredInput, setSelectedValue, initiateSearch }) => {
           onChange={(e) => {
             setEnteredInput(e.target.value);
           }}
+          onKeyDown={(k) => {
+            if (k.key == "Enter") {
+              initiateSearch(true);
+            }
+          }}
         ></input>
         <button className={styles.button} onClick={() => initiateSearch(true)}>
           Search
