@@ -16,7 +16,7 @@
   align-items: center;
   /* flex-direction: column; */
   flex-wrap: wrap;
-  margin-bottom: 1.5vh;
+  margin-bottom: 10vh;
 }
 .loader {
   height: 300px;
