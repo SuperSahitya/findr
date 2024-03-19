@@ -27,7 +27,7 @@ export default function Home() {
       const query = `${selectedValue.value}=${enteredInput.toUpperCase()}`;
       const fetchData = async () => {
         try {
-          const response = await fetch(`/api/data?query=${query}`);
+          const response = await fetch(`/api/data?${query}`);
 
           if (!response.ok) {
             throw new Error(`Error ${response.status}: ${response.statusText}`);
