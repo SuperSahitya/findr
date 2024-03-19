@@ -1,6 +1,6 @@
-"use server"
+"use server";
 
-export default async function handler(req, res) {
+export async function GET(req) {
   const API_KEY = process.env.API_KEY;
   const query = new URLSearchParams(req.query).toString();
   try {
@@ -17,8 +17,8 @@ export default async function handler(req, res) {
       throw new Error(`HTTP error! status: ${response.status}`);
     }
     const data = await response.json();
-    res.status(200).json(data);
+    return Response.json(data);
   } catch (error) {
-    res.status(500).json({ message: error.message });
+    return Response.json({ message: error.message });
   }
 }
