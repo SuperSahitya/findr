@@ -18,7 +18,6 @@ export default function Home() {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
   const [found, setFound] = useState(true);
-  const NEXT_PUBLIC_KEY = process.env.NEXT_PUBLIC_KEY;
 
   useEffect(() => {
     if (search) {
@@ -28,15 +27,7 @@ export default function Home() {
       const query = `${selectedValue.value}=${enteredInput.toUpperCase()}`;
       const fetchData = async () => {
         try {
-          const response = await fetch(
-            `https://stalker-api.vercel.app/api/connectToDatabase/?${query}`,
-            {
-              method: "GET",
-              headers: {
-                "api-key": NEXT_PUBLIC_KEY,
-              },
-            }
-          );
+          const response = await fetch(`/api/data?query=${query}`);
 
           if (!response.ok) {
             throw new Error(`Error ${response.status}: ${response.statusText}`);
