@@ -23,6 +23,7 @@ export default function Home() {
   useEffect(() => {
     if (search) {
       setFound(true);
+      setData([]);
       setLoading(true);
       setError("");
       const query = `${selectedValue.value}=${enteredInput.toUpperCase()}`;
