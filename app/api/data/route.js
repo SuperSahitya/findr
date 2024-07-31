@@ -1,5 +1,5 @@
 import { MongoClient } from "mongodb";
-const { NextRequest, NextResponse } = require("next/server");
+const { NextResponse } = require("next/server");
 
 async function runDatabase(thatName, thatRoll, thatReg, thatDate) {
   let me;

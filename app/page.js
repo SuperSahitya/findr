@@ -89,6 +89,8 @@ export default function Home() {
                 sgpa={value.sgpa}
                 passStatus={value.status}
                 birthDate={value.birthDate}
+                supp={value.suppIn}
+                gender={value.gender}
               ></DataRep>
             );
           })}
