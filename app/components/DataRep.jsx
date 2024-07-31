@@ -1,5 +1,5 @@
 import React from "react";
-import styles from "./datarep.module.css"
+import styles from "./datarep.module.css";
 
 const DataRep = ({
   studentName,
@@ -10,6 +10,8 @@ const DataRep = ({
   sgpa,
   passStatus,
   birthDate,
+  supp,
+  gender,
 }) => {
   return (
     <>
@@ -23,6 +25,21 @@ const DataRep = ({
           <div>{`SGPA: ${sgpa}`}</div>
           <div>{`Status: ${passStatus}`}</div>
           <div>{`BirthDate: ${birthDate}`}</div>
+          <div>
+            {`Gender: `}
+            {gender == "M" ? "Male" : "Female"}
+          </div>
+          {supp && supp.length > 0 && (
+            <div>
+              {`Supp In: `}
+              {supp.map((s, idx) => (
+                <span key={`supp${idx}`}>
+                  {s}
+                  {idx < supp.length - 1 ? ", " : ""}
+                </span>
+              ))}
+            </div>
+          )}
         </div>
       </div>
     </>
