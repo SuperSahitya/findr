@@ -1,0 +1,17 @@
+.mainContainer {
+  display: flex;
+  flex-direction: row;
+  min-height: 90vh;
+  width: 100vw;
+  /* justify-content: center; */
+  align-items: center;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10vh;
+}
+
+.charts {
+  width: 95%;
+}

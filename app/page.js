@@ -61,7 +61,6 @@ export default function Home() {
   return (
     <>
       <div className={styles.mainContainer}>
-        <Navbar></Navbar>
         <SearchTab
           setSelectedValue={setSelectedValue}
           setEnteredInput={setEnteredInput}
@@ -95,7 +94,6 @@ export default function Home() {
             );
           })}
         </div>
-        <Footer></Footer>
       </div>
     </>
   );
