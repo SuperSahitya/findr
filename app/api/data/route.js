@@ -10,26 +10,25 @@ async function runDatabase(thatName, thatRoll, thatReg, thatDate) {
     const database = client.db("Students");
     const collection = database.collection("sem4data");
 
-    if (thatName !== undefined) {
+    if (thatName !== null) {
       me = await collection
         .find({
           name: { $regex: `.*${thatName}.*` },
         })
         .toArray();
-      console.log(me);
-    } else if (thatRoll !== undefined) {
+    } else if (thatRoll !== null) {
       me = await collection
         .find({
           rollNumber: `${thatRoll}`,
         })
         .toArray();
-    } else if (thatReg !== undefined) {
+    } else if (thatReg !== null) {
       me = await collection
         .find({
           regNumber: `${thatReg}`,
         })
         .toArray();
-    } else if (thatDate !== undefined) {
+    } else if (thatDate !== null) {
       me = await collection
         .find({
           birthDate: { $regex: `^${thatDate}` },
