@@ -29,24 +29,18 @@ export default function Home() {
       const query = `${selectedValue.value}=${enteredInput.toUpperCase()}`;
       const fetchData = async () => {
         try {
-          const response = await fetch(
-            `https://stalker-api.vercel.app/api/connectToDatabase/?${query}`,
-            {
-              method: "GET",
-              headers: {
-                "api-key": NEXT_PUBLIC_KEY,
-              },
-            }
-          );
-
-          if (!response.ok) {
-            throw new Error(`Error ${response.status}: ${response.statusText}`);
-          }
+          const response = await fetch(`/api/data?${query}`);
+          // console.log(response);
+          // if (!response.ok) {
+          //   console.log(await response.json())
+          //   throw new Error(`Error ${response.status}: ${response.statusText}`);
+          // }
 
           const data = await response.json();
+          console.log(data);
 
           if (data.error) {
-            throw new Error(data.error.message);
+            throw new Error(data.error);
           }
 
           setData(data);
