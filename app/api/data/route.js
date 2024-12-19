@@ -8,7 +8,7 @@ async function runDatabase(thatName, thatRoll, thatReg, thatDate) {
   try {
     await client.connect();
     const database = client.db("Students");
-    const collection = database.collection("sem4data");
+    const collection = database.collection("sem5data");
 
     if (thatName !== null) {
       me = await collection
@@ -61,7 +61,7 @@ export async function GET(request) {
 
     if (!value || value.length === 0) {
       console.log("No Value Found");
-      return NextResponse.json({ error: "No Value Found." }, { status: 404 });
+      return NextResponse.json({ error: "No data Found." }, { status: 404 });
     }
 
     return NextResponse.json(value);

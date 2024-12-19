@@ -25,10 +25,7 @@ const DataRep = ({
           <div>{`SGPA: ${sgpa}`}</div>
           <div>{`Status: ${passStatus}`}</div>
           <div>{`BirthDate: ${birthDate}`}</div>
-          <div>
-            {`Gender: `}
-            {gender == "M" ? "Male" : "Female"}
-          </div>
+          <div>{`Gender: ${gender}`}</div>
           {supp && supp.length > 0 && (
             <div>
               {`Supp In: `}

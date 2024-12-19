@@ -71,7 +71,7 @@ export default function Home() {
           ""
         ) : (
           <p className={styles.error}>
-            An Error Occured While Fetching Data: {error}
+            {error}
           </p>
         )}
         {found ? "" : <p className={styles.error2}>No Data Found</p>}

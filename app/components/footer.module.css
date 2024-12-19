@@ -25,6 +25,10 @@
 .copyright {
   margin-left: 10px;
   font-weight: bold;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
 }
 .footerLinks {
   text-decoration: none;
@@ -35,15 +39,22 @@
   justify-content: center;
   align-items: center;
 }
-.footerIcon {
+
+.copyrightIcon {
   font-size: 1.7em;
   margin: 2px;
 }
-@media (max-width: 600px){
-  #me{
+
+.footerIcon {
+  font-size: 1.7em;
+  margin: 2px;
+  margin-top: 10px;
+}
+@media (max-width: 600px) {
+  #me {
     display: none;
   }
-  .lastName{
+  .lastName {
     display: none;
   }
 }
