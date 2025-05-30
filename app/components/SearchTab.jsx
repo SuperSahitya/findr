@@ -5,11 +5,12 @@ import Select from "react-select";
 import { useState } from "react";
 
 const searchTab = ({ setEnteredInput, setSelectedValue, initiateSearch }) => {
+  const [searchType, setSearchType] = useState("Name");
   const options = [
-    { value: "name", label: "Name:" },
-    { value: "roll", label: "Roll:" },
-    { value: "reg", label: "Reg:" },
-    { value: "date", label: "BirthDate:" },
+    { value: "name", label: "Name" },
+    { value: "roll", label: "RollNo." },
+    { value: "reg", label: "RegNo." },
+    { value: "date", label: "BirthDate" }
   ];
   const customStyles = {
     control: (base, state) => ({
@@ -44,12 +45,13 @@ const searchTab = ({ setEnteredInput, setSelectedValue, initiateSearch }) => {
             defaultValue={options[0]}
             onChange={(v) => {
               setSelectedValue(v);
+              setSearchType(v.label);
             }}
             options={options}
           />
         </div>
         <input
-          placeholder="Search"
+          placeholder={`Search by ${searchType}`}
           className={styles.input}
           onChange={(e) => {
             setEnteredInput(e.target.value);

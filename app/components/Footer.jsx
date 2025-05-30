@@ -34,7 +34,7 @@ const Footer = () => {
             <div className={styles.copyright}>
               <FaRegCopyright className={styles.copyrightIcon} />{" "}
               <span>
-                2024 Sahitya Kumar{" "}
+                {new Date().getFullYear()} Sahitya Kumar{" "}
                 <span className={styles.lastName}>Choubey</span>
               </span>
             </div>

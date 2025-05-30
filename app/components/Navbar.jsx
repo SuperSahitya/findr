@@ -10,11 +10,11 @@ const Navbar = () => {
             Findr
           </Link>
         </div>
-        <div className={styles.menu}>
+        {/* <div className={styles.menu}>
           <Link href={"/analysis"} className={styles.link}>
             Analysis
           </Link>
-        </div>
+        </div> */}
       </div>
     </>
   );

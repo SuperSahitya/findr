@@ -1,11 +1,8 @@
 "use client";
-import Image from "next/image";
 import styles from "./page.module.css";
-import Navbar from "./components/Navbar";
 import DataRep from "./components/DataRep";
 import SearchTab from "./components/SearchTab";
 import { useState, useEffect } from "react";
-import Footer from "./components/Footer";
 
 export default function Home() {
   const [data, setData] = useState([]);

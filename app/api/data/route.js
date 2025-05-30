@@ -8,7 +8,7 @@ async function runDatabase(thatName, thatRoll, thatReg, thatDate) {
   try {
     await client.connect();
     const database = client.db("Students");
-    const collection = database.collection("sem5data");
+    const collection = database.collection("sem6data");
 
     if (thatName !== null) {
       me = await collection
@@ -19,8 +19,9 @@ async function runDatabase(thatName, thatRoll, thatReg, thatDate) {
     } else if (thatRoll !== null) {
       me = await collection
         .find({
-          rollNumber: `${thatRoll}`,
+          rollNumber: { $regex: `.*${thatRoll}.*` },
         })
+        .sort({ cgpa: -1 })
         .toArray();
     } else if (thatReg !== null) {
       me = await collection
